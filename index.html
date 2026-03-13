@@ -1,88 +1,40 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!DOCTYPE html> 
+<html> 
+<head> 
 
-<title>Profile Perimetry 3D</title>
+<title>Profile Perimetry 3D</title> 
 
-<style>
+<style> 
 
-body{
-  font-family: Arial;
-  text-align:center;
-  margin-top:80px;
-}
+body{ 
+font-family: Arial; 
+text-align:center; 
+margin-top:80px; 
+} 
 
-button{
-  padding:18px 40px;
-  margin:20px;
-  font-size:18px;
-}
+button{ 
+padding:18px 40px; 
+margin:20px; 
+font-size:18px; 
+} 
 
-#auth{
-  position:absolute;
-  top:20px;
-  right:20px;
-}
+</style> 
 
-</style>
+</head> 
+<body> 
 
-</head>
+<h1>3D Hill of Vision Viewer</h1> 
 
-<body>
+<p>Select dataset</p> 
 
-<div id="auth">
-<button onclick="signIn()">Sign In</button>
-<button onclick="signUp()">Sign Up</button>
-<button onclick="logout()">Logout</button>
-</div>
+<a href="olleyes/index.html"> 
 
+<button>Olleyes Mean Hill</button> 
 
-<h1>3D Hill of Vision Viewer</h1>
+</a> <a href="hfa/index.html"> 
 
-<p>Select dataset</p>
+<button>HFA Mean Hill</button> 
+</a> 
 
-<a href="olleyes/index.html">
-<button>Olleyes Mean Hill</button>
-</a>
-
-<a href="hfa/index.html">
-<button>HFA Mean Hill</button>
-</a>
-
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
-
-<script>
-
-const firebaseConfig = {
-  apiKey: "YOUR_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com"
-};
-
-firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
-
-function signUp(){
-
-  const email = prompt("Enter email");
-  const password = prompt("Enter password");
-
-  auth.createUserWithEmailAndPassword(email,password)
-}
-
-function signIn(){
-
-  const email = prompt("Enter email");
-  const password = prompt("Enter password");
-
-  auth.signInWithEmailAndPassword(email,password)
-}
-
-function logout(){
-  auth.signOut()
-}
-
-</script>
-
-</body>
+</body> 
 </html>
